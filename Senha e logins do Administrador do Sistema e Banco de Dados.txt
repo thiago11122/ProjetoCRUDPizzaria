@@ -1,0 +1,4 @@
+Login do Sistema: Adm
+Senha do Sistema: Adm
+
+Deve-se criar um Banco de Dados MySql chamado pizzaria, para ser o Banco de Dados do sistema.

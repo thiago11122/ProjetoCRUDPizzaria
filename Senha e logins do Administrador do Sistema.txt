@@ -1,2 +1,0 @@
-Login do Sistema: Adm
-Senha do Sistema: Adm
