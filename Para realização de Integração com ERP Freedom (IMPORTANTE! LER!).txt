@@ -1,0 +1,19 @@
+Para a integração com o ERP Freedom Funcionar, deve-se excluir todos os registros presentes nas tabelas
+VDCLIENTE e FNRECEBER do Banco de Dados do ERP.
+
+Tais registros podem ser excluidos manualmente ao se excluir Clientes e Pedidos pelo ERP.
+
+Eles também podem ser excluídos pelo comando SQL DELETE, mas para tal, deve-se inicialmente inserir um
+novo registro na tabela SGCONEXAO da seguinte forma:
+
+INSERT INTO SGCONEXAO VALUES (CURRENT_CONNECTION, 99, 1, 'sysdba', 1, 1, 1,CURRENT_TIMESTAMP,CURRENT_TIMESTAMP, 'SYSDBA',CURRENT_TIMESTAMP,CURRENT_TIMESTAMP, 'SYSDBA')
+
+Apenas após a inserção deste registro na tabela, se pode realizar a exclusão dos registros diretamente pelo
+Banco de Dados do Freedom.
+
+Independente se a exclusão for feita pelo próprio sistema do ERP ou diretamente pelo seu Banco de Dados,
+ao terminar o processo, deve-se excluir todos os registros presentes na tabela SGCONEXAO.
+
+Com este processo realizado, o Sistema Legado da Pizzaria funcionará de forma integrada com o ERP Freedom
+versão 1.3.7.0
+
